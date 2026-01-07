@@ -35,9 +35,9 @@ while True:
                 sent = sent + 1
                 print "DuMPiNG TaRGeT: %s | PoRT: %s | SiZe: %s | TiMe: %s | PaCKeT: %s"%(ip, port, size, t1m3, sent)
 				#sys.stdout.write("\x1b]2;Total Packets Sent: %s\x07" % sent)
-        except KeyboardInterrupt:
-                print " Stopping Flood!"
+        except (KeyboardInterrupt):
+                print("Stopping Flood!")
                 sys.exit()
         except socket.error, msg:
-                print "Socket Couldn't Connect"
+                print("Socket Couldn't Connect")
                 sys.exit()
